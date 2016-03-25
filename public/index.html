@@ -1,0 +1,39 @@
+<html ng-app="todoApp">
+<head>
+   <meta charset="UTF-8">
+   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.2/angular.min.js"></script>
+   <script src="app.js"></script>
+  <title>Harry Potter</title>
+</head>
+<body ng-controller="TodoListController">
+<table>
+  <tr>
+      <td ng-repeat="data in book">
+        <center>
+            <img ng-src="./pic/{{data.img}}" width="180" height="280">
+                {{data.name}}
+                {{data.price}} ฿
+            <button ng-click="add(data)">add</button>
+      </td>
+  </tr>
+
+</table>
+<br>
+<table>
+    <tr ng-repeat="data1 in choose track by $index">
+        <td>
+              {{data1.name}}    จำนวน {{data1.amount}}
+        </td>
+        <td>
+              <button ng-click="del($index)">Delete</button>
+        </td>
+    </tr>
+</table>
+Total Money : {{sum}}
+<br>
+discount  : {{sell}}
+<br>
+You Pay Money : {{sum-sell}}
+
+</body>
+</html>
