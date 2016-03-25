@@ -60,6 +60,7 @@ angular.module('todoApp', [])
 
     ]
     $scope.sum = 0
+    $scope.allamount = 0
     $scope.choose = []
     var index = 0
     $scope.add = function (data) {
@@ -72,10 +73,12 @@ angular.module('todoApp', [])
           img: data.img,
           amount: data.amount += 1
         })
+        $scope.allamount += 1
         $scope.sum += 100
       } else {
         $scope.choose.push(data)
         $scope.sum += 100
+        $scope.allamount += 1
       }
 
       $scope.check = true
@@ -111,9 +114,18 @@ angular.module('todoApp', [])
     $scope.del = function (index) {
       if ($scope.choose[index].amount === 1) {
         $scope.choose.splice(index, 1)
+        if ($scope.allamount === 0) {
+          $scope.sum = 0
+        }
+        $scope.sum -= 100
+        $scope.allamount -= 1
       } else {
         $scope.choose[index].amount -= 1
         $scope.sum -= 100
+        if ($scope.allamount === 0) {
+          $scope.sum = 0
+        }
+        $scope.allamount -= 1
       }
       $scope.amount = []
       for (var i = 0; i < $scope.choose.length; i++) {
