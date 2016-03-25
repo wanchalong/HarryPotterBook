@@ -4,7 +4,7 @@ angular.module('todoApp', [])
     $scope.book = [
       {
         id: 1,
-        name: 'book1',
+        name: 'แฮร์รี่ พอตเตอร์กับศิลาอาถรรพ์',
         price: 100,
         img: '1.jpg',
         amount: 1
@@ -12,7 +12,7 @@ angular.module('todoApp', [])
 
       {
         id: 2,
-        name: 'book2',
+        name: 'แฮร์รี่ พอตเตอร์กับห้องแห่งความลับ',
         price: 100,
         img: '2.jpg',
         amount: 1
@@ -20,7 +20,7 @@ angular.module('todoApp', [])
 
       {
         id: 3,
-        name: 'book3',
+        name: 'แฮร์รี่ พอตเตอร์กับนักโทษแห่งอัซคาบัน',
         price: 100,
         img: '3.jpg',
         amount: 1
@@ -28,7 +28,7 @@ angular.module('todoApp', [])
 
       {
         id: 4,
-        name: 'book4',
+        name: 'แฮร์รี่ พอตเตอร์กับถ้วยอัคนี',
         price: 100,
         img: '4.jpg',
         amount: 1
@@ -36,7 +36,7 @@ angular.module('todoApp', [])
 
       {
         id: 5,
-        name: 'book5',
+        name: 'แฮร์รี่ พอตเตอร์กับภาคีนกฟีนิกซ์',
         price: 100,
         img: '5.jpg',
         amount: 1
@@ -44,7 +44,7 @@ angular.module('todoApp', [])
 
       {
         id: 6,
-        name: 'book6',
+        name: 'แฮร์รี่ พอตเตอร์กับเจ้าชายเลือดผสม',
         price: 100,
         img: '6.jpg',
         amount: 1
@@ -52,7 +52,7 @@ angular.module('todoApp', [])
 
       {
         id: 7,
-        name: 'book7',
+        name: 'แฮร์รี่ พอตเตอร์กับเครื่องรางยมทูต',
         price: 100,
         img: '7.jpg',
         amount: 1
