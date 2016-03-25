@@ -109,7 +109,7 @@ angular.module('todoApp', [])
     }
 
     $scope.del = function (index) {
-      if ($scope.choose[index].amount === 0) {
+      if ($scope.choose[index].amount === 1) {
         $scope.choose.splice(index, 1)
       } else {
         $scope.choose[index].amount -= 1
