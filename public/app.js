@@ -63,17 +63,10 @@ angular.module('todoApp', [])
     $scope.sum = 0
     $scope.allamount = 0
     $scope.choose = []
-    var index = 0
+
     $scope.add = function (data) {
       if ($scope.checkadd(data.id)) {
-        index = $scope.checkindex(data.id)
-        $scope.choose.splice(index, 1, {
-          id: data.id,
-          name: data.name,
-          price: data.price,
-          img: data.img,
-          amount: data.amount += 1
-        })
+        $scope.choose[$scope.checkindex(data.id)].amount++
         $scope.allamount += 1
         $scope.sum += 100
       } else {
