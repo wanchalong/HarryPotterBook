@@ -8,6 +8,7 @@
         <!--Import Google Icon Font-->
         <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <!--Import materialize.css-->
+          <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
         <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
 
         <!--Let browser know website is optimized for mobile-->
@@ -24,10 +25,12 @@
     <nav class="light-blue lighten-1" role="navigation">
         <div class="nav-wrapper container"><a id="logo-container" class="brand-logo">ร้านนายจิน</a>
           <ul class="right hide-on-med-and-down">
-            <li><button class="waves-light btn-large green modal-trigger" data-target="modal1"><a href="#"><i class="material-icons right">shopping_cart</i>My Cart {{allamount}}</a></button></li>
+            <li>
+              <a class="modal-trigger" data-target="modal1">
+                <i class="material-icons right">shopping_cart</i>My Cart {{allamount}}</a></li>
           </ul>
           <ul id="nav-mobile" class="side-nav">
-            <button class="waves-light btn-large blue modal-trigger" data-target="modal1" id="cart"><a href="#"><i class="material-icons right">shopping_cart</i>My Cart {{allamount}}</a></button>
+            <button class="waves-light btn-large blue modal-trigger" data-target="modal1" id="cart"><a href=""><i class="material-icons right">shopping_cart</i>My Cart {{allamount}}</a></button>
           </ul>
           <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
         </div>
@@ -66,7 +69,7 @@
                       จำนวน {{data1.amount}} เล่ม
                     </div>
                     <div class="col s4">
-                      <a class="btn-floating btn-small waves-effect waves-default red" ng-click="add(data1,$index)"><i class="material-icons">add</i></a>
+                      <a class="btn-floating btn-small waves-effect waves-default blue" ng-click="add(data1,$index)"><i class="material-icons">add</i></a>
                         <a class="btn-floating btn-small waves-effect waves-default red" id="delete{{$index + 1}}" ng-click="del($index)"><i class="material-icons">remove</i></a>
 
                   </div>
@@ -75,9 +78,9 @@
         <div class="row">
           <div class="col s4" style="width=30%;">Total Money : </div>
           <div class="col s6">{{sum}}</div>
-          <div class="col s4">  discount  : </div>
+          <div class="col s4" id="discount">Discount  : </div>
           <div class="col s6">{{sell}}</div>
-          <div class="col s4">all :  </div>
+          <div class="col s4">All Book :  </div>
           <div class="col s6">{{allamount}}</div>
           <div class="col s4">You Pay Money : </div>
           <div class="col s6" id="total">{{sum-sell}}</div>
@@ -103,9 +106,6 @@
   </footer>
 
   <!--  Scripts-->
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="js/materialize.js"></script>
-  <script src="js/init.js"></script>
 
 
 </body>
