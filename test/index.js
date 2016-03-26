@@ -38,7 +38,7 @@ describe('test by book', function () {
       })
     expect(link).to.equal('420')
   })
-  it('Case 3 : Select Book1 2 picec   Book2 2 picec Book3 2 picec', function * () {
+  it('Case 3 : Select Book1 2 picec Book2 2 picec Book3 2 picec Pay Money', function * () {
     this.timeout(30000)
     var nightmare = Nightmare()
     var link = yield nightmare
@@ -55,7 +55,7 @@ describe('test by book', function () {
     expect(link).to.equal('480')
   })
 
-  it('Case 4 : Select Book1 1 picec   Book2 2 picec Book3 3 picec', function * () {
+  it('Case 4 : Select Book1 1 picec Book2 2 picec Book3 3 picec', function * () {
     this.timeout(30000)
     var nightmare = Nightmare()
     var link = yield nightmare
@@ -72,7 +72,7 @@ describe('test by book', function () {
     expect(link).to.equal('520')
   })
 
-  it('Case 5 : Select Book1 1 picec   Book2 2 picec Book3 3 picec Discount price', function * () {
+  it('Case 5 : Select Book1 1 picec Book2 2 picec Book3 3 picec Discount price', function * () {
     this.timeout(30000)
     var nightmare = Nightmare()
     var link = yield nightmare
