@@ -1,6 +1,7 @@
 /* global angular */
 angular.module('todoApp', [])
   .controller('TodoListController', function ($scope) {
+    $scope.hi = true
     $scope.book = [
       {
         id: 1,
@@ -80,7 +81,11 @@ angular.module('todoApp', [])
         $scope.sum += 100
         $scope.allamount += 1
       }
-
+      if ($scope.choose.lenght === 0) {
+        $scope.hi = true
+      } else {
+        $scope.hi = false
+      }
       $scope.check = true
       $scope.choose.sort(function (a, b) {
         if (a.amount > b.amount) return -1
@@ -131,6 +136,7 @@ angular.module('todoApp', [])
       for (var i = 0; i < $scope.choose.length; i++) {
         $scope.amount.push($scope.choose[i].amount)
       }
+
       $scope.discount($scope.amount)
     }
 
