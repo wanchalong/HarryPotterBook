@@ -13,6 +13,12 @@
         <!--Let browser know website is optimized for mobile-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/js/materialize.min.js"></script>
+
 </head>
 <body ng-controller="TodoListController">
 
@@ -26,9 +32,8 @@
           <ul class="right hide-on-med-and-down">
             <li><button class="waves-light btn-large green modal-trigger" data-target="modal1"><a href="#"><i class="material-icons right">shopping_cart</i>My Cart {{allamount}}</a></button></li>
           </ul>
-
           <ul id="nav-mobile" class="side-nav">
-            <li><a href="#">Navbar Link</a></li>
+            <button class="waves-light btn-large blue modal-trigger" data-target="modal1" id="cart"><a href="#"><i class="material-icons right">shopping_cart</i>My Cart {{allamount}}</a></button>
           </ul>
           <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
         </div>
@@ -45,18 +50,13 @@
   <div class="row">
       <div class="col s12 m3" ng-repeat="data in book">
             <img ng-src="./pic/{{data.img}}" class="responsive-img"><br>
-            <center><a class="waves-effect waves-default btn green" ng-click="add(data)"><i class="material-icons right">shopping_cart</i> 100 ฿ </a>
+            <center><a class="waves-effect waves-default btn green" ng-click="add(data)" id="book{{$index + 1}}"><i class="material-icons right">shopping_cart</i> 100 ฿ </a>
             <br><br><br>
       </div>
   </div>
 </div>
 </div>
 <br>
-
-
-
-
-
 
 <div class="container">
   <div class="row">
@@ -80,30 +80,19 @@
                       จำนวน {{data1.amount}} เล่ม
                     </div>
                     <div class="col s4">
-                        <a class="btn-floating btn-small waves-effect waves-default red" ng-click="del($index)"><i class="material-icons">delete</i></a>
+                        <a class="btn-floating btn-small waves-effect waves-default red" id="delete{{$index + 1}}" ng-click="del($index)"><i class="material-icons">delete</i></a>
                     </div>
-
             </div>
-
         </div>
         <div class="row">
           <div class="col s4" style="width=30%;">Total Money : </div>
           <div class="col s6">{{sum}}</div>
-
           <div class="col s4">  discount  : </div>
           <div class="col s6">{{sell}}</div>
           <div class="col s4">all :  </div>
           <div class="col s6">{{allamount}}</div>
           <div class="col s4">You Pay Money : </div>
-          <div class="col s6">{{sum-sell}}</div>
-
-
-
-
-
-
-
-
+          <div class="col s6" id="total">{{sum-sell}}</div>
         </div>
     </div>
   </div>
@@ -119,27 +108,13 @@
 
 
 
-
-
-
-
-
 <footer class="page-footer blue">
-    <div class="container">
-      <div class="row">
-        <div class="col l6 s12">
-          <h5 class="white-text">Company Bio</h5>
-          <p class="grey-text text-lighten-4">on this project and is greatly appreciated.</p>
-        </div>
-      </div>
-    </div>
     <div class="footer-copyright">
       <div class="container">
-      Made by <a class="orange-text text-lighten-3" href="http://materializecss.com"> 5606021622079  WANCHALONG</a>
+      Create by <a class="orange-text text-lighten-3" href="http://materializecss.com"> WANCHALONG  JAMJANG</a>
       </div>
     </div>
   </footer>
-
 
   <!--  Scripts-->
   <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
