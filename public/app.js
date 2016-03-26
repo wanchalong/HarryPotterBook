@@ -63,7 +63,6 @@ angular.module('todoApp', [])
     $scope.sum = 0
     $scope.allamount = 0
     $scope.choose = []
-
     $scope.add = function (data) {
       if ($scope.checkadd(data.id)) {
         $scope.choose[$scope.checkindex(data.id)].amount++
